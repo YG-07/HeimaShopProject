@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "home-nav": "/components/content/homeNav"
+  }
+}

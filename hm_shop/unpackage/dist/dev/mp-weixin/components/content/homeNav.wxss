@@ -1,0 +1,13 @@
+
+.iconfont {
+	color: #fff;
+	font-size: 50rpx;
+}
+._a{
+	text-decoration: none;
+	color: #000;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+

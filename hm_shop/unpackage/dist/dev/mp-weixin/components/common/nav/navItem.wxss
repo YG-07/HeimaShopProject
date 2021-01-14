@@ -1,0 +1,20 @@
+
+.nav-item{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	        flex:1;
+	text-align: center;
+}
+.img{
+	margin: 20rpx auto;
+	width: 120rpx;
+	height: 120rpx;
+	line-height: 120rpx;
+	background: #F67B66;
+	border-radius: 50%;
+}
+.txt{
+	margin-bottom: 20rpx;
+	font-size: 30rpx;
+}
+
