@@ -42,12 +42,12 @@
 					{
 						icon:'iconfont icon-telephone',
 						title:'联系我们',
-						path:'/pages'
+						path:'/pages/contact/contact'
 					},
 					{
 						icon:'iconfont icon-picture',
 						title:'社区图片',
-						path:'/pages'
+						path:'/pages/pics/pics'
 					},
 					{
 						icon:'iconfont icon-comment',

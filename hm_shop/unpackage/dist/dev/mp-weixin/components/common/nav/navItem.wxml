@@ -1,1 +1,0 @@
-<view class="nav-item"><view class="img"><slot name="img"></slot></view><view class="txt"><slot name="txt"></slot></view></view>

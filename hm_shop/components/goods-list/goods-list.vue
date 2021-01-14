@@ -1,6 +1,7 @@
 <template>
 	<view class="goods_list">
 		<view class="goods_item" v-for="item in goods" :key="item.id">
+			<!-- 图片链接失效，请更新数据库 -->
 			<image src="../../static/404.png"></image>
 			<view class="price">
 				<text>￥{{item.sell_price}}</text>

@@ -101,6 +101,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    goodsList: function() {
+      return __webpack_require__.e(/*! import() | components/goods-list/goods-list */ "components/goods-list/goods-list").then(__webpack_require__.bind(null, /*! @/components/goods-list/goods-list.vue */ 65))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -136,15 +159,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var homeNav = function homeNav() {__webpack_require__.e(/*! require.ensure | components/content/homeNav */ "components/content/homeNav").then((function () {return resolve(__webpack_require__(/*! ../../components/content/homeNav.vue */ 41));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var goodsList = function goodsList() {__webpack_require__.e(/*! require.ensure | components/goods-list/goods-list */ "components/goods-list/goods-list").then((function () {return resolve(__webpack_require__(/*! ../../components/goods-list/goods-list.vue */ 65));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -173,12 +188,34 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   components: {
-    homeNav: homeNav },
+    goodsList: goodsList },
 
   data: function data() {
     return {
       swipers: [],
-      goods: [] };
+      goods: [],
+      navs: [
+      {
+        icon: 'iconfont icon-mall',
+        title: '黑马超市',
+        path: '/pages/goods/goods' },
+
+      {
+        icon: 'iconfont icon-telephone',
+        title: '联系我们',
+        path: '/pages/contact/contact' },
+
+      {
+        icon: 'iconfont icon-picture',
+        title: '社区图片',
+        path: '/pages/pics/pics' },
+
+      {
+        icon: 'iconfont icon-comment',
+        title: '学习资料',
+        path: '/pages' }] };
+
+
 
   },
   onLoad: function onLoad() {
@@ -199,9 +236,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
                   _this2.$myRuquest({
                     url: '/api/getgoods?pageindex=1' }));case 2:res = _context2.sent;
 
-                _this2.goods = res.data.message;
-                console.log(_this2.goods);case 5:case "end":return _context2.stop();}}}, _callee2);}))();
+                _this2.goods = res.data.message;case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
+    navItemClick: function navItemClick(url) {
+      uni.navigateTo({
+        url: url });
+
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 18 */,

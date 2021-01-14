@@ -24,54 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.home swiper {
+.constant .img {
   width: 750rpx;
-  height: 380rpx;
+  height: 320rpx;
 }
-.home swiper image {
-  width: 100%;
-  height: 100%;
+.constant .info {
+  padding: 10rpx 20rpx;
 }
-.home .hot_goods {
-  background-color: #eee;
-  overflow: hidden;
-}
-.home .hot_goods .tit {
-  margin: 7px 0;
-  background-color: #fff;
-  color: #F67B66;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  letter-spacing: 20px;
-}
-.nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  width: 750rpx;
-  text-align: center;
-}
-.nav-item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  text-align: center;
-}
-.img {
-  margin: 20rpx auto;
-  width: 120rpx;
-  height: 120rpx;
-  line-height: 120rpx;
-  background: #F67B66;
-  border-radius: 50%;
-}
-.txt {
-  margin-bottom: 20rpx;
+.constant .info view {
+  padding: 10rpx;
   font-size: 30rpx;
+  line-height: 70rpx;
+  border: 1px solid #eee;
 }
-.iconfont {
-  color: #fff;
-  font-size: 50rpx;
+.map {
+  width: 750rpx;
+  height: 750rpx;
 }
 

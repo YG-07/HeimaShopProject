@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "nav-bar": "/components/common/nav/navBar",
-    "nav-item": "/components/common/nav/navItem"
-  }
-}
