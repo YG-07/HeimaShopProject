@@ -7,8 +7,9 @@
 		</scroll-view>
 		<scroll-view scroll-y="true" class="right">
 			<view class="item" v-for="item in secondData" :key="item.id">
-				<!-- 图片链接失效，请更新数据库 -->
-				<image src="../../static/404.png"></image>
+				<!-- 图片链接失效，请更新数据库  item.img_url-->
+				<image @click="previewImg(item.img_url)" :src="item.img_url"
+					style="background-color: #FFECEC;" ></image>
 				<text>{{item.title}}</text>
 			</view>
 			<view class="isOver">
@@ -43,6 +44,17 @@
 					url:'/api/getimages/'+id
 				})
 				this.secondData = res.data.message
+				console.log(this.secondData)
+			},
+			previewImg(current){
+				const urls = this.secondData.map(item=>{
+					return item.img_url
+				})
+				console.log(urls)
+				uni.previewImage({
+					current,
+					urls
+				})
 			}
 		},
 		onLoad() {
