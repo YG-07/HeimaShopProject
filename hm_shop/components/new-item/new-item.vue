@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="news_item" @click="navigat(item.id)" v-for="item in list" :key="item.id">
-			<image :src="item.img_url"></image>
+			<image style="background-color: #FFECEC;" :src="item.img_url"></image>
 			<view class="right">
 				<view class="tit">
 					{{item.title}}

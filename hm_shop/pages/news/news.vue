@@ -23,7 +23,6 @@
 					url:'/api/getnewslist'
 				})
 				this.newsList = res.data.message
-				console.log(this.newsList)
 			},
 			goDetail(id){
 				uni.navigateTo({
